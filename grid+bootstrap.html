@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybrid Grid Interface</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr; /* Sidebar (1 part) - Main Content (3 parts) */
+            gap: 20px;
+            padding: 20px;
+        }
+        .sidebar {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .main-content {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .footer {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bootstrap Header -->
+    <header class="container-fluid bg-primary text-white text-center p-3">
+        <h2>Hybrid Grid Interface</h2>
+    </header>
+
+    <!-- CSS Grid + Bootstrap Grid -->
+    <div class="container mt-4">
+        <div class="grid-container">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h4>Sidebar Menu</h4>
+                <ul class="list-unstyled">
+                    <li>🏠 Home</li>
+                    <li>📂 About</li>
+                    <li>📝 Blog</li>
+                    <li>📞 Contact</li>
+                </ul>
+            </div>
+
+            <!-- Main Content using Bootstrap Grid -->
+            <div class="main-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="p-3 bg-white shadow-sm rounded">📌 Box 1</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-3 bg-white shadow-sm rounded">📌 Box 2</div>
+                    </div>
+                    <div class="col-md-12 mt-3">
+                        <div class="p-3 bg-white shadow-sm rounded">📌 Full-width Box</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Footer -->
+    <footer class="container footer">
+        <p>© 2025 Hybrid Grid Design</p>
+    </footer>
+
+</body>
+</html>
